@@ -1,4 +1,4 @@
-import 'package:recipes_shopping_list/modules/events/domain/meal_interface.dart';
+import 'package:recipes_shopping_list/modules/interfaces/meal_interface.dart';
 
 class Event {
   IMeal? _meal;

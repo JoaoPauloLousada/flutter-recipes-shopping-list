@@ -1,4 +1,4 @@
-import 'package:recipes_shopping_list/modules/meal/domain/recipe_interface.dart';
+import 'package:recipes_shopping_list/modules/interfaces/recipe_interface.dart';
 
 class Meal {
   String _name = '';
