@@ -1,8 +1,10 @@
 import 'package:recipes_shopping_list/modules/interfaces/ingredient_interface.dart';
 
 class Recipe {
+  Recipe(this._name, this._ingredients);
+
   String _name = '';
-  Set<IIgredient> _ingredients = {};
+  List<IIgredient> _ingredients = [];
 
   String get name {
     return this._name;
@@ -12,11 +14,11 @@ class Recipe {
     this._name = n;
   }
 
-  Set<IIgredient> get ingredients {
+  List<IIgredient> get ingredients {
     return this._ingredients;
   }
 
-  set ingredients(Set<IIgredient> i) {
+  set ingredients(List<IIgredient> i) {
     this._ingredients = i;
   }
 }

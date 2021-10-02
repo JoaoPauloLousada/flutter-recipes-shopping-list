@@ -1,6 +1,7 @@
 import 'package:recipes_shopping_list/modules/ingredients/domain/units_enum.dart';
+import 'package:recipes_shopping_list/modules/interfaces/ingredient_interface.dart';
 
-class Ingredient {
+class Ingredient implements IIgredient {
   String _name = '';
   IngredientUnit _unit = IngredientUnit.GRAMS;
 

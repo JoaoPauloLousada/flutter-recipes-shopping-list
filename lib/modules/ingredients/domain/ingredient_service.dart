@@ -10,7 +10,6 @@ class IngredientService {
   final HttpClient http;
 
   Future<List<Ingredient>> getIngredientsList() {
-    print('getIngredientsList $mockIngredientList');
     return Future.value(mockIngredientList);
   }
 }

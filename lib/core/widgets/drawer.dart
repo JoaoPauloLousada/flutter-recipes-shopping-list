@@ -21,10 +21,18 @@ class CustomDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.ac_unit_outlined),
-            title: Text('My ingredients'),
+            title: Text('Meus ingredientes'),
             onTap: () {
               Navigator.pushNamed(
                   context, getRouteName(RoutesNames.MY_INGREDIENTS));
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.ac_unit_outlined),
+            title: Text('Minhas receitas'),
+            onTap: () {
+              Navigator.pushNamed(
+                  context, getRouteName(RoutesNames.MY_RECIPES));
             },
           ),
         ],
