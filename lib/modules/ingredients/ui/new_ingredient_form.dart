@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:recipes_shopping_list/modules/ingredients/domain/ingredient_model.dart';
+import 'package:recipes_shopping_list/modules/ingredients/domain/mock_ingredients_response.dart';
 import 'package:recipes_shopping_list/modules/ingredients/domain/units_enum.dart';
 
 class NewIngredientForm extends StatefulWidget {
-  NewIngredientForm({Key? key}) : super(key: key);
+  NewIngredientForm({Key? key, required this.onSave}) : super(key: key);
+  final Function onSave;
 
   @override
   _NewIngredientFormState createState() => _NewIngredientFormState();
@@ -74,7 +77,7 @@ class _NewIngredientFormState extends State<NewIngredientForm> {
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
-                print('crete ingredient: $_name $_unit');
+                widget.onSave(new Ingredient(_name!, _unit!));
               }
             },
             child: Text('Create ingredient'),

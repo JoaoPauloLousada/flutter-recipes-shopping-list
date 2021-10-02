@@ -4,6 +4,9 @@ class Ingredient {
   String _name = '';
   IngredientUnit _unit = IngredientUnit.GRAMS;
 
+  Ingredient(this._name, this._unit);
+  Ingredient.empty();
+
   String get name {
     return this._name;
   }
