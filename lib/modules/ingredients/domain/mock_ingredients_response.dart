@@ -5,4 +5,6 @@ List<Ingredient> mockIngredientList = [
   new Ingredient('arroz', IngredientUnit.KILOGRAMS),
   new Ingredient('feijao', IngredientUnit.KILOGRAMS),
   new Ingredient('leite', IngredientUnit.LITTERS),
+  new Ingredient('Carne de sol', IngredientUnit.KILOGRAMS),
+  new Ingredient('Água', IngredientUnit.LITTERS),
 ];
