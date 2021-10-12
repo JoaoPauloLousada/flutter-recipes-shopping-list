@@ -24,28 +24,7 @@ class _IngredientsAddState extends State<IngredientsAdd> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: Colors.black38,
-        ),
-      ),
-      child: Column(
-        children: [
-          // Align(
-          //   alignment: Alignment.centerLeft,
-          //   child: OutlinedButton(
-          //     onPressed: () {
-          //       print('Received click');
-          //     },
-          //     child: const Text('Adicionar ingrediente'),
-          //   ),
-          // ),
-          TextField(
-            onChanged: _getList,
-          ),
-        ],
-      ),
+      child: Text('Add ingredients'),
     );
   }
 }

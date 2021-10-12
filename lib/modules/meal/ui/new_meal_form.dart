@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:recipes_shopping_list/modules/meal/domain/meal_model.dart';
 
-class NewRecipeForm extends StatefulWidget {
-  NewRecipeForm({Key? key}) : super(key: key);
+class NewMealForm extends StatefulWidget {
+  NewMealForm({Key? key, required this.onSave}) : super(key: key);
+  final Function onSave;
 
   @override
-  _NewRecipeFormState createState() => _NewRecipeFormState();
+  _NewMealFormState createState() => _NewMealFormState();
 }
 
-class _NewRecipeFormState extends State<NewRecipeForm> {
+class _NewMealFormState extends State<NewMealForm> {
   final _formKey = GlobalKey<FormState>();
   String? _name;
-  String? _description;
 
   @override
   Widget build(BuildContext context) {
@@ -33,20 +34,14 @@ class _NewRecipeFormState extends State<NewRecipeForm> {
               _name = value ?? '';
             },
           ),
-          TextFormField(
-            decoration: InputDecoration(
-              labelText: 'Descrição',
-            ),
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Please enter some text';
+          ElevatedButton(
+            onPressed: () {
+              if (_formKey.currentState!.validate()) {
+                _formKey.currentState!.save();
+                widget.onSave(new Meal(_name!));
               }
-              return null;
             },
-            onSaved: (value) {
-              print('name: $value');
-              _description = value ?? '';
-            },
+            child: Text('Create Meal'),
           ),
         ],
       ),

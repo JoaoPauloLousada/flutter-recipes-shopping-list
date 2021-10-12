@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:recipes_shopping_list/screens/home_screen.dart';
+import 'package:recipes_shopping_list/screens/meals_screen.dart';
 import 'package:recipes_shopping_list/screens/my_ingredients_screen.dart';
 import 'package:recipes_shopping_list/screens/my_recipes_screen.dart';
 import 'package:recipes_shopping_list/screens/new_ingredient.dart';
+import 'package:recipes_shopping_list/screens/new_meal_screen.dart';
 import 'package:recipes_shopping_list/screens/new_recipe_screen.dart';
 
 enum RoutesNames {
@@ -11,6 +13,8 @@ enum RoutesNames {
   NEW_INGREDIENT,
   MY_RECIPES,
   NEW_RECIPE,
+  MEALS,
+  NEW_MEAL,
 }
 
 Map<RoutesNames, String> routesNames = {
@@ -19,6 +23,8 @@ Map<RoutesNames, String> routesNames = {
   RoutesNames.NEW_INGREDIENT: '/new-ingredient',
   RoutesNames.MY_RECIPES: '/my-recipes',
   RoutesNames.NEW_RECIPE: '/new-recipe',
+  RoutesNames.MEALS: '/meals',
+  RoutesNames.NEW_MEAL: '/new-meals',
 };
 
 String getRouteName(RoutesNames name) {
@@ -31,4 +37,6 @@ Map<String, Widget Function(BuildContext)> routes = {
   getRouteName(RoutesNames.NEW_INGREDIENT): (context) => NewIngredientScreen(),
   getRouteName(RoutesNames.MY_RECIPES): (context) => MyRecipesScreen(),
   getRouteName(RoutesNames.NEW_RECIPE): (context) => NewRecipeScreen(),
+  getRouteName(RoutesNames.MEALS): (context) => MealsScreen(),
+  getRouteName(RoutesNames.NEW_MEAL): (context) => NewMealScreen(),
 };

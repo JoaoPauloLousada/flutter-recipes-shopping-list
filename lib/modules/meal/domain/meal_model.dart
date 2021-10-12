@@ -4,6 +4,8 @@ class Meal {
   String _name = '';
   Set<IRecipe> _recipes = {};
 
+  Meal(this._name);
+
   String get name {
     return this._name;
   }
