@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipes_shopping_list/core/widgets/bottom_bar.dart';
 import 'package:recipes_shopping_list/core/widgets/drawer.dart';
 
 class LayoutDefault extends StatelessWidget {
@@ -18,6 +19,7 @@ class LayoutDefault extends StatelessWidget {
       drawer: CustomDrawer(),
       body: body,
       floatingActionButton: floatingActionButton,
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

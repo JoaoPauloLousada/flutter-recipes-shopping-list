@@ -17,4 +17,19 @@ List<Recipe> mockRecipeList = [
       new Ingredient('Carne', IngredientUnit.KILOGRAMS),
     ],
   ),
+  new Recipe(
+    'Feijão cozido',
+    'Descrição feijão cozido.',
+    [
+      new Ingredient('Feijão', IngredientUnit.KILOGRAMS),
+      new Ingredient('Alho', IngredientUnit.KILOGRAMS),
+    ],
+  ),
+  new Recipe(
+    'Mandioca cozida',
+    'Descrição mandioca cozida.',
+    [
+      new Ingredient('Mandioca', IngredientUnit.KILOGRAMS),
+    ],
+  ),
 ];

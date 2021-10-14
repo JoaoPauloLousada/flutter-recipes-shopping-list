@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipes_shopping_list/screens/events_timeline_screen.dart';
 import 'package:recipes_shopping_list/screens/home_screen.dart';
 import 'package:recipes_shopping_list/screens/meals_screen.dart';
 import 'package:recipes_shopping_list/screens/my_ingredients_screen.dart';
@@ -32,7 +33,8 @@ String getRouteName(RoutesNames name) {
 }
 
 Map<String, Widget Function(BuildContext)> routes = {
-  getRouteName(RoutesNames.INITIAL): (context) => HomeScreen(),
+  // getRouteName(RoutesNames.INITIAL): (context) => HomeScreen(),
+  getRouteName(RoutesNames.INITIAL): (context) => EventsTimelineScreen(),
   getRouteName(RoutesNames.MY_INGREDIENTS): (context) => MyIngredientsScreen(),
   getRouteName(RoutesNames.NEW_INGREDIENT): (context) => NewIngredientScreen(),
   getRouteName(RoutesNames.MY_RECIPES): (context) => MyRecipesScreen(),
